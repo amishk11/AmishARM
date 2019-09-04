@@ -43,8 +43,7 @@
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
-                            "storageAccountType": "StandardSSD_LRS",
-                            "id": "[parameters('disks_AmishMachine1_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a_externalid')]"
+                            "storageAccountType": "StandardSSD_LRS"
                         },
                         "diskSizeGB": 127
                     },
