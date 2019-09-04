@@ -20,6 +20,7 @@
         }
     },
     "variables": {},
+    
     "resources": [
         {
             "type": "Microsoft.Compute/virtualMachines",
