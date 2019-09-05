@@ -55,11 +55,6 @@
                             "createOption": "Attach",
                             "caching": "ReadOnly",
                             "writeAcceleratorEnabled": false,
-                            "managedDisk": {
-                                "id": "[resourceId('Microsoft.Compute/disks/', concat(parameters('virtualMachines_AmishMachine1_name'),'-datadisk1'))]"
-								
-                                //"id": "ManagedId" //"[resourceId('Microsoft.Compute/disks', 'AmishMachine2_DataDisk_0')]" //"[parameters('disks_AmishMachine1_DataDisk_0_externalid')]"
-                            },
                             "diskSizeGB": 128,
                             "toBeDetached": false
                         }
