@@ -57,7 +57,7 @@
                             "writeAcceleratorEnabled": false,
                             "managedDisk": {
                                 "storageAccountType": "StandardSSD_LRS",
-                                "id": "[parameters('disks_AmishMachine1_DataDisk_0_externalid')]"
+                                "id": null //"[parameters('disks_AmishMachine1_DataDisk_0_externalid')]"
                             },
                             "diskSizeGB": 128,
                             "toBeDetached": false
@@ -67,6 +67,7 @@
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_AmishMachine1_name')]",
                     "adminUsername": "amish",
+					"adminPassword": "Amish@123456",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
                         "enableAutomaticUpdates": true
@@ -77,7 +78,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[parameters('networkInterfaces_amishmachine1529_externalid')]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', 'amishmachine1531')]" //"[parameters('networkInterfaces_amishmachine1529_externalid')]"
                         }
                     ]
                 },
