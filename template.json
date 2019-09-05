@@ -56,8 +56,8 @@
                             "caching": "ReadOnly",
                             "writeAcceleratorEnabled": false,
                             "managedDisk": {
-                                "storageAccountType": "StandardSSD_LRS"
-                                //"id": "[resourceId('Microsoft.Compute/disks', 'AmishMachine2_DataDisk_0')]" //"[parameters('disks_AmishMachine1_DataDisk_0_externalid')]"
+                                "storageAccountType": "StandardSSD_LRS",
+                                "id": "ManagedId" //"[resourceId('Microsoft.Compute/disks', 'AmishMachine2_DataDisk_0')]" //"[parameters('disks_AmishMachine1_DataDisk_0_externalid')]"
                             },
                             "diskSizeGB": 128,
                             "toBeDetached": false
