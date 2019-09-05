@@ -2,17 +2,17 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "virtualMachines_AmishMachine1_name": {
+        "virtualMachines_AmishMachine2_name": {
             "value": "Amish2"
         },
-        "disks_AmishMachine1_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a_externalid": {
-            "value": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine1_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a"
+        "disks_AmishMachine2_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a_externalid": {
+            "value": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine2_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a"
         },
-        "disks_AmishMachine1_DataDisk_0_externalid": {
-            "value": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine1_DataDisk_0"
+        "disks_AmishMachine2_DataDisk_0_externalid": {
+            "value": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine2_DataDisk_0"
         },
-        "networkInterfaces_amishmachine1529_externalid": {
-            "value": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Network/networkInterfaces/amishmachine1529"
+        "networkInterfaces_AmishMachine2529_externalid": {
+            "value": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Network/networkInterfaces/AmishMachine2529"
         }
     }
 }

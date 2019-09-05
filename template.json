@@ -2,30 +2,29 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "virtualMachines_AmishMachine1_name": {
-            "defaultValue": "AmishMachine1",
+        "virtualMachines_AmishMachine2_name": {
+            "defaultValue": "AmishMachine2",
             "type": "String"
         },
-        "disks_AmishMachine1_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a_externalid": {
-            "defaultValue": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine1_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a",
+        "disks_AmishMachine2_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a_externalid": {
+            "defaultValue": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine2_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a",
             "type": "String"
         },
-        "disks_AmishMachine1_DataDisk_0_externalid": {
-            "defaultValue": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine1_DataDisk_0",
+        "disks_AmishMachine2_DataDisk_0_externalid": {
+            "defaultValue": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Compute/disks/AmishMachine2_DataDisk_0",
             "type": "String"
         },
-        "networkInterfaces_amishmachine1529_externalid": {
-            "defaultValue": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Network/networkInterfaces/amishmachine1529",
+        "networkInterfaces_AmishMachine2529_externalid": {
+            "defaultValue": "/subscriptions/369349d8-b2ae-41be-9544-faeac5d2057d/resourceGroups/Amish_Resource_Sep_02_2019/providers/Microsoft.Network/networkInterfaces/AmishMachine2529",
             "type": "String"
         }
     },
     "variables": {},
-    
     "resources": [
         {
             "type": "Microsoft.Compute/virtualMachines",
             "apiVersion": "2019-03-01",
-            "name": "[parameters('virtualMachines_AmishMachine1_name')]",
+            "name": "[parameters('virtualMachines_AmishMachine2_name')]",
             "location": "eastus",
             "properties": {
                 "hardwareProfile": {
@@ -40,7 +39,7 @@
                     },
                     "osDisk": {
                         "osType": "Windows",
-                        "name": "[concat(parameters('virtualMachines_AmishMachine1_name'), '_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a')]",
+                        "name": "[concat(parameters('virtualMachines_AmishMachine2_name'), '_OsDisk_1_95c8b4ccdd9f46b2a5eac837a3c8186a')]",
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
@@ -51,13 +50,13 @@
                     "dataDisks": [
                         {
                             "lun": 0,
-                            "name": "[concat(parameters('virtualMachines_AmishMachine1_name'), '_DataDisk_0')]",
+                            "name": "[concat(parameters('virtualMachines_AmishMachine2_name'), '_DataDisk_0')]",
                             "createOption": "Attach",
                             "caching": "ReadOnly",
                             "writeAcceleratorEnabled": false,
                             "managedDisk": {
                                 "storageAccountType": "StandardSSD_LRS",
-                                "id": "[parameters('disks_AmishMachine1_DataDisk_0_externalid')]"
+                                "id": "[parameters('disks_AmishMachine2_DataDisk_0_externalid')]"
                             },
                             "diskSizeGB": 128,
                             "toBeDetached": false
@@ -65,7 +64,7 @@
                     ]
                 },
                 "osProfile": {
-                    "computerName": "[parameters('virtualMachines_AmishMachine1_name')]",
+                    "computerName": "[parameters('virtualMachines_AmishMachine2_name')]",
                     "adminUsername": "amish",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
@@ -77,7 +76,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[parameters('networkInterfaces_amishmachine1529_externalid')]"
+                            "id": "[parameters('networkInterfaces_AmishMachine2529_externalid')]"
                         }
                     ]
                 },
